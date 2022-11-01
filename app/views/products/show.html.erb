@@ -10,6 +10,10 @@
   <%= @product.description %>
 </p>
 
+<figure class="image is-3by1">
+  <%= image_tag @product.featured_image %>
+</figure>
+
 <p>
   <strong>Price:</strong>
   <%= @product.price %>
