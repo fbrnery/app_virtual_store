@@ -1,0 +1,37 @@
+<% if notice %>
+<aside id="notice"><%= notice %></aside>
+<% end %>
+<br><br>
+<section class="py-5 text-center container">
+    <h1 class="fw-light">Your notebook catalog:</h1>
+    <hr>
+    <br>
+    <p class="lead text-muted">
+
+    </p>
+
+    <div class="card">
+        <div class="row py-lg-5">
+            <h2>Check out our main offers:</h2>
+
+        </div>
+
+        <div class="container-fluid">
+            <div class="container text-justify">
+                <div class="row">
+
+                    <% @products.each do |product| %>
+
+                    <div class="col">
+                        <%= image_tag product.featured_image %>
+                    </div>
+                    <div class="col">
+                        <h5><%= product.title %></h5>
+                        <br>
+                        <h6><%= number_to_currency(product.price) %></h6>
+                    </div>
+                    <% end %>
+                </div>
+            </div>
+        </div>
+</section>
