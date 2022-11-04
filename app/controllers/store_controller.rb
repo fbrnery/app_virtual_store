@@ -3,6 +3,8 @@ class StoreController < ApplicationController
 
   end
 
+  include CurrentCart
+  before_action :set_cart
    def loja
     @products = Product.order(:title)
   end

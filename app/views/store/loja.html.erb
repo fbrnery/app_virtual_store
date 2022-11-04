@@ -3,6 +3,13 @@
 <% end %>
 <br><br>
 <section class="py-5 text-center container">
+    <% if @cart %>
+
+        <div id="cart" class="carts">
+          <%= render @cart %>
+        </div>
+        <% end %>
+    <hr>
     <h1 class="fw-light">Your notebook catalog:</h1>
     <hr>
     <br>
@@ -29,7 +36,9 @@
                         <h5><%= product.title %></h5>
                         <br>
                         <h6><%= number_to_currency(product.price) %></h6>
-                        <h6><%= button_to 'Add to Cart', line_items_path(product_id: product) %></h6>
+                        <h6><%= button_to 'Add to Cart', line_items_path(product_id: product),
+              remote: true %></h6>
+                    
                     </div>
                     <% end %>
                 </div>
