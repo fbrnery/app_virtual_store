@@ -3,7 +3,7 @@
 body {
     padding-top: 3rem;
     padding-bottom: 3rem;
-    color: #5a5a5a;
+   
 }
 
 /* Carousel base class */
@@ -58,3 +58,33 @@ body {
 .mb-2 {
     padding-right: 50px;
 }
+
+input[type="submit"] {
+    background-color: #4054B2;
+    border-radius: 0.354em;
+    border: solid thin #4054B2;
+    color: white;
+    font-size: 1em;
+    padding: 0.354em 1em;
+}
+
+input[type="submit"]:hover {
+    background-color: #6EC1E4;
+}
+
+.notice,
+#notice {
+    background: #ffb;
+    border-radius: 0.5em;
+    border: solid 0.177em #882;
+    color: #882;
+    font-weight: bold;
+    margin-bottom: 15em;
+    padding: 1em 1.414em;
+    text-align: center;
+}
+
+.carrinho {
+    margin-bottom: 5rem;
+}
+
