@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :contatos
   resources :orders
   resources :line_items
   resources :carts
@@ -7,6 +8,7 @@ Rails.application.routes.draw do
   get 'store/contatos'
   get 'store/suporte'
   get 'store/loja'
+  get 'contatos/new'
 
 
   resources :products
