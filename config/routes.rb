@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :administrators
   resources :contatos
   resources :orders
   resources :line_items
