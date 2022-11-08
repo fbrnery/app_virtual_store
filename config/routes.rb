@@ -6,7 +6,7 @@ Rails.application.routes.draw do
   root 'store#index', as: 'store_index'
   get 'store/index'
   get 'store/contatos'
-  get 'store/suporte'
+  get 'store/empresa'
   get 'store/loja'
   get 'contatos/new'
 
