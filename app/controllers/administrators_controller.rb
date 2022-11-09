@@ -1,4 +1,5 @@
 class AdministratorsController < ApplicationController
+  skip_before_action :authorize, only:  [:index, :new, :create, :show, :edit, :update, :destroy]
   before_action :set_administrator, only: %i[ show edit update destroy ]
 
   # GET /administrators or /administrators.json
@@ -25,7 +26,7 @@ class AdministratorsController < ApplicationController
 
     respond_to do |format|
       if @administrator.save
-        format.html { redirect_to administrators_url, 
+        format.html { redirect_to login_url, 
         notice: "Administrator #{@administrator.name} was successfully created." }
         format.json { render :show, status: :created, location: @administrator }
       else
