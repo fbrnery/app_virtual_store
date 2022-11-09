@@ -1,0 +1,48 @@
+<br><br><br><br>
+<div class="container">
+    <h1>Welcome to the e-commerce administrative area:</h1>
+    <hr>
+    <p>
+        <h6>
+            It's <%= Time.now %>.
+            We have <%= pluralize(@total_orders, "order") %>.
+        </h6>
+    </p>
+</div>
+
+
+ <div class="container">
+   <% if session[:administrator_id] %>
+
+    <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-dark text-decoration-none">
+       <%= image_tag 'login2.png' =%>
+      <span class="fs-4">Admin menu:</span>
+    </a>
+    <hr>
+    
+    <ul class="nav nav-pills flex-column mb-auto">
+        <a class="btn btn-primary" href="/admin" role="button">ADMIN</a>
+        
+      <li>
+        <a href="#" class="nav-link link-dark">
+           <li><%= link_to '| Orders |',   orders_path   %></li>
+        </a>
+      </li>
+      <li>
+        <a href="#" class="nav-link link-dark">
+          <svg class="bi pe-none me-2" width="16" height="16"><use xlink:href="#table"/></svg>
+          <li><%= link_to '| Products |', products_path %></li>
+        </a>
+      </li>
+      <li>
+        <a href="#" class="nav-link link-dark">
+          <svg class="bi pe-none me-2" width="16" height="16"><use xlink:href="#grid"/></svg>
+           <li><%= link_to '| administrators |',    administrators_path    %></li>
+        </a>
+      </li>
+      <br>
+     <li><%= button_to 'Logout', logout_path, method: :delete   %></li>
+    </ul>
+    <hr>
+    <% end %>
+  </div>

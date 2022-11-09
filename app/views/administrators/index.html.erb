@@ -12,12 +12,12 @@
 
   <tbody>
     <% @administrators.each do |administrator| %>
-      <tr>
-        <td><%= administrator.name %></td>
-        <td><%= link_to 'Show', administrator %></td>
-        <td><%= link_to 'Edit', edit_administrator_path(administrator) %></td>
-        <td><%= link_to 'Destroy', administrator, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
+    <tr>
+      <td><%= administrator.name %></td>
+      <td><%= link_to 'Show', administrator %></td>
+      <td><%= link_to 'Edit', edit_administrator_path(administrator) %></td>
+      <td><%= link_to 'Destroy', administrator, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    </tr>
     <% end %>
   </tbody>
 </table>
@@ -25,3 +25,7 @@
 <br>
 
 <%= link_to 'New Administrator', new_administrator_path %>
+<hr>
+
+<br>
+<%= link_to '<< Admin', admin_path %>

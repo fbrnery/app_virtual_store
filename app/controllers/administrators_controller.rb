@@ -25,8 +25,8 @@ class AdministratorsController < ApplicationController
 
     respond_to do |format|
       if @administrator.save
-        format.html { redirect_to administrator_url, 
-        notice: "Administrator #{@user.name} was successfully created." }
+        format.html { redirect_to administrators_url, 
+        notice: "Administrator #{@administrator.name} was successfully created." }
         format.json { render :show, status: :created, location: @administrator }
       else
         format.html { render :new, status: :unprocessable_entity }
