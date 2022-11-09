@@ -1,4 +1,5 @@
 class ContatosController < ApplicationController
+  skip_before_action :authorize, only: [:new, :create]
   before_action :set_contato, only: %i[ show edit update destroy ]
 
   # GET /contatos or /contatos.json
