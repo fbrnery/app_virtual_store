@@ -2,8 +2,7 @@
 
 body {
     padding-top: 3rem;
-    padding-bottom: 10rem;
-   
+
 }
 
 /* Carousel base class */
@@ -118,11 +117,6 @@ input[type="submit"]:hover {
   }
 
 
-.actions {
-    padding-left: 0rem;
-    padding-right: 0rem;
-}
-
 input,
 textarea,
 select,
@@ -186,5 +180,21 @@ label {
     overflow-y: auto;
 }
 
+.mx-auto {
+    text-align: justify;
+}
+
+.bs-docs-footer {
+padding-top: 5px; 
+padding-bottom: 15px; 
+color: #777777; 
+text-align: center;
+background-color: #101010;
+}
 
 
+.rodape {
+background-color: #252525; 
+padding: 18px; 
+margin-bottom: -13px;
+}
