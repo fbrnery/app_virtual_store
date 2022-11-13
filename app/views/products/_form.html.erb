@@ -10,16 +10,20 @@
   </ul>
 </div>
 <% end %>
-
+<br><br>
+<div class="container">
+  <h2>Products:</h2>
+  <hr>
+</div>
 <div class="container">
   <div class="field">
     <%= form.label :title %>
-    <%= form.text_field :title %>
+    <%= form.text_field :title, class: "form-control" %>
   </div>
   <br>
   <div class="field">
     <%= form.label :description %>
-    <%= form.text_area :description %>
+    <%= form.text_area :description, class: "form-control" %>
   </div>
   <br>
   <br>
@@ -39,7 +43,7 @@
   <br>
   <div class="field">
     <%= form.label :price %>
-    <%= form.text_field :price %>
+    <%= form.text_field :price, class: "form-control" %>
   </div>
   <br>
 

@@ -43,6 +43,8 @@
                         </div>
                         <div class="col">
                             <h5><%= product.title %></h5>
+                            <h6><%= product.description %></h6>
+
                             <br>
                             <h6><%= number_to_currency(product.price) %></h6>
                             <h6><%= button_to 'Add to Cart', line_items_path(product_id: product),
