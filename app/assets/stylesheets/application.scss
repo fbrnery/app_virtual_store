@@ -91,22 +91,6 @@ input[type="submit"]:hover {
     margin-bottom: 5rem;
 }
 
- #cart {
-     article {
-         h2 {
-             margin-top: 0;
-         }
-
-         background: white;
-         border-radius: 0.5em;
-         margin: 1em;
-         padding: 1.414em;
-
-         @media (min-width: 30em) {
-             margin: 0; // desktop doesn't need this margin
-         }
-     }
- }
 
   .carrinho {
       text-align: center;
@@ -198,3 +182,18 @@ background-color: #252525;
 padding: 18px; 
 margin-bottom: -13px;
 }
+
+.navbar-text {
+    margin-top: -2rem;
+}
+
+//Cart
+.text-bg-dark {
+    color: #fff !important;
+    height: 10rem;
+    width: 22rem;
+    font-size: 14px;
+   
+}
+
+//

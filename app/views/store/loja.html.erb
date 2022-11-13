@@ -3,45 +3,54 @@
 <% end %>
 <br><br>
 <section class="py-5 text-center container">
-    <% if @cart %>
-
-        <div id="cart" class="carts">
-          <%= render @cart %>
-        </div>
-        <% end %>
-    <hr>
-    <h1 class="fw-light">Your notebook catalog:</h1>
-    <hr>
-    <br>
-    <p class="lead text-muted">
-
-    </p>
-
-    <div class="card">
-        <div class="row py-lg-5">
-            <h2>Check out our main offers:</h2>
-
+    <div class="container-text-center">
+        <div class="row align-items-start">
+            <% if @cart %>
+            <div id="cart" class="col">
+                <%= render @cart %>
+            </div>
+            <div class="col">
+                <h6>Marketing / Promoções:</h6>
+                <hr>
+                <%= video_tag "video.mp4", :size => "350x260", :controls => true %>
+                <br><br>
+            </div>
+            <% end %>
         </div>
 
-        <div class="container-fluid">
-            <div class="container text-justify">
-                <div class="row">
+        <hr>
+        <h1 class="fw-light">online catalog:</h1>
+        <hr>
+        <br>
+        <p class="lead text-muted">
 
-                    <% @products.each do |product| %>
+        </p>
 
-                    <div class="col">
-                        <%= image_tag product.featured_image %>
-                    </div>
-                    <div class="col">
-                        <h5><%= product.title %></h5>
-                        <br>
-                        <h6><%= number_to_currency(product.price) %></h6>
-                        <h6><%= button_to 'Add to Cart', line_items_path(product_id: product),
+        <div class="card">
+            <div class="row py-lg-5">
+                <h2>Check out our main offers:</h2>
+
+            </div>
+
+            <div class="container-fluid">
+                <div class="container text-justify">
+                    <div class="row">
+
+                        <% @products.each do |product| %>
+
+                        <div class="col">
+                            <%= image_tag product.featured_image %>
+                        </div>
+                        <div class="col">
+                            <h5><%= product.title %></h5>
+                            <br>
+                            <h6><%= number_to_currency(product.price) %></h6>
+                            <h6><%= button_to 'Add to Cart', line_items_path(product_id: product),
               remote: true %></h6>
-                    
+
+                        </div>
+                        <% end %>
                     </div>
-                    <% end %>
                 </div>
             </div>
-        </div>
 </section>

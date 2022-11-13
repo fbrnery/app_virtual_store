@@ -1,33 +1,32 @@
 <article>
 
-<div class="card text-bg-dark" >
-  <div class="card-header">
-    <h1>Your Cart</h2>
-  </div>
- <table>
+  <div class="card text-bg-dark">
+    <div class="card-header">
+      <h1>Your Cart</h2>
+    </div>
+    <table>
 
-    <%= render(cart.line_items) %>
-    <tfoot>
-      <tr>
-        <th colspan="2">Total:</th>
-        <td class="price"><%= number_to_currency(cart.total_price) %></td>
-      </tr>
-    </tfoot>
-  </table>
-  <br>
-   <div class="carrinho">
-<div class="row">
-  <div class="col">
-  <%= button_to 'Empty cart', cart,
+      <%= render(cart.line_items) %>
+      <tfoot>
+        <tr>
+          <th colspan="2">Total:</th>
+          <td class="price"><%= number_to_currency(cart.total_price) %></td>
+        </tr>
+      </tfoot>
+    </table>
+    <br>
+    <div class="carrinho">
+      <div class="row">
+        <div class="col">
+          <%= button_to 'Empty cart', cart,
                 method: :delete,
                 data: { confirm: 'Are you sure?' } %>
-  </div>
-   <div class="col">
-  <%= button_to 'Checkout', new_order_path,
+        </div>
+        <div class="col">
+          <%= button_to 'Checkout', new_order_path,
                 method: :get,
                 class: "checkout"%>
-  </div>
-</div>
-</div>
-<br><br>
+        </div>
+      </div>
+    </div>
 </article>
